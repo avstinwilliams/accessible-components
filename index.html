@@ -1,32 +1,325 @@
-  <!-- TO RUN IN BROWSER:
+<!-- TO RUN IN BROWSER:
     1. Install vscode extension Name: open in `browser open-in-browser` by TechER
     2. Right click html file and either run in default browser or another browser
   -->
 
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML/CSS Studio</title>
-    <!-- import CSS styles -->
-    <link rel="stylesheet" href="styles.css" /> 
-  </head>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Accessible Components Case Study</title>
+		<!-- import CSS styles -->
+		<link rel="stylesheet" href="styles.css" />
+	</head>
 
-  <!-- page content goes into <body> -->
-  <body>
-    <div id="logoBar">
-      <h1>Welcome to 100 Acre Wood!</h1>
-      <img id="siteLogo" alt="Pooh-bear site logo" src="./assets/Header.png"/>
-      <h3>We're glad you're here :D</h3>
-    </div>
-    <hr/>
-    <div id="staffGallery">
-      <img class="galleryImage" src="./assets/Eeyore-Eh.png"/>
-      <img class="galleryImage" src="./assets/Eeyore-Zz.png"/>
-      <img class="galleryImage" src="./assets/Kanga-Roo.png"/>
-      <img class="galleryImage" src="./assets/Owl-Phone.png"/>
-    </div>
-  </body>
+	<!-- page content goes into <body> -->
+	<body>
+		<header>
+			<h1>Accessible Components Case Study</h1>
+		</header>
+		<main>
+			<section id="introduction">
+				<h2>Introduction</h2>
+				<p>
+					This case study explores the accessibility of radio buttons across three different applications: Google Forms,
+					MacOS System Preferences, and Amazon Checkout.
+				</p>
+			</section>
 
+			<section id="part1">
+				<h2>Part 1: Input Analysis</h2>
+				<p>Below are screenshots of radio buttons in different states across three applications.</p>
+
+				<h3>Google Forms</h3>
+				<figure>
+					<img src="./assets/forms_default.png" alt="Google Forms — default state" />
+					<figcaption>Google Forms — default state</figcaption>
+				</figure>
+				<figure>
+					<img src="./assets/forms_hover.png" alt="Google Forms — Paint the CIT hovered" />
+					<figcaption>Google Forms — "Paint the CIT" hovered</figcaption>
+				</figure>
+				<figure>
+					<img src="./assets/forms_selected.png" alt="Google Forms — Paint the CIT selected" />
+					<figcaption>Google Forms — "Paint the CIT" selected</figcaption>
+				</figure>
+				<figure>
+					<img src="./assets/forms_selected_hover.png" alt="Google Forms — Paint the CIT selected and hovered" />
+					<figcaption>Google Forms — "Paint the CIT" selected and hovered</figcaption>
+				</figure>
+
+				<h3>MacOS System Preferences</h3>
+				<figure>
+					<img src="./assets/sys_pref_default.png" alt="System Preferences — default state" />
+					<figcaption>System Preferences — default state</figcaption>
+				</figure>
+				<figure>
+					<img
+						src="./assets/sys_pref_preclick.png"
+						alt="System Preferences — When scrolling clicked but not released"
+					/>
+					<figcaption>System Preferences — "When scrolling" clicked but not released</figcaption>
+				</figure>
+
+				<h3>Amazon Checkout</h3>
+				<figure>
+					<img src="./assets/amazon_default.png" alt="Amazon Checkout — default state" />
+					<figcaption>Amazon Checkout — default state</figcaption>
+				</figure>
+				<figure>
+					<img src="./assets/amazon_preclick.png" alt="Amazon Checkout — Thursday, Feb 27 clicked but not released" />
+					<figcaption>Amazon Checkout — "Thursday, Feb 27" clicked but not released</figcaption>
+				</figure>
+				<figure>
+					<img src="./assets/amazon_hover.png" alt="Amazon Checkout — Wednesday, Feb 26 hovered" />
+					<figcaption>Amazon Checkout — "Wednesday, Feb 26" hovered</figcaption>
+				</figure>
+
+				<h3>Comparison Table</h3>
+				<table>
+					<tr>
+						<th>Feature</th>
+						<th>Google Forms</th>
+						<th>System Preferences</th>
+						<th>Amazon Checkout</th>
+					</tr>
+					<tr>
+						<td>Mouse Interaction</td>
+						<td>
+							<ul>
+								<li>Hover creates a very light circle around button</li>
+								<li>Button is filled and color is changed once clicked</li>
+								<li>Nice animation on click</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>No hover effect</li>
+								<li>No animation</li>
+								<li>Clicked button has strong accent color and white dot indicated clicked state</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Very slight darkening of button on hover</li>
+								<li>Hovering over date text causes hover state</li>
+								<li>Selections hide and reveal text based on delivery date</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>Keyboard Navigation</td>
+						<td>
+							<ul>
+								<li>Tab navigates between form sections</li>
+								<li>Arrow keys navigate between radio buttons</li>
+								<li>Focused option automatically selected</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Keyboard control not avaliable</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Tab key lets you get to radio section</li>
+								<li>Arrow keys navigate between radio buttons</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>Mobile Interaction</td>
+						<td>
+							<ul>
+								<li>Similar visual feedback to desktop</li>
+								<li>No long-press functionality</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Mobile interaction not avaliable</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Similar visual feedback to desktop</li>
+								<li>No long-press functionality</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<p>
+					Comparison and summary — Google Forms has by far the most accessible design, with more states than Amazon or
+					MacOS and more intuitive keyboard controls. MacOS has by far the least, with no hover state or keyboard
+					controls. Amazon is somewhere in the middle, and changing from radio button to radio button on their site has
+					significant processing time.
+				</p>
+			</section>
+
+			<section id="part2">
+				<h2>Part 2: Output Analysis</h2>
+				<p>
+					This section looks at the output of radio buttons: selection, and the differing effectiveness screen readers
+					have across the three applications.
+				</p>
+
+				<h3>Comparison Table</h3>
+				<table>
+					<tr>
+						<th>Feature</th>
+						<th>Google Forms</th>
+						<th>Apple System Preferences</th>
+						<th>Amazon Checkout</th>
+					</tr>
+					<tr>
+						<td>Selection</td>
+						<td>
+							<ul>
+								<li>Light gray circle becomes colored circle with filled in blue circle inside</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Filled in gray circle becomes filled in blue circle with small white dot inside</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>Thin gray circle becomes colored circle with large filled in blue circle inside</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>Screen Reader</td>
+						<td>
+							<ul>
+								<li>Voiceover does not say number of radio buttons</li>
+								<li>Section title not repeated</li>
+								<li>Label and button seperate</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>VoiceOver says number of radio buttons, selected/not selected</li>
+								<li>Section title is repeated when changing buttons</li>
+								<li>Label and button not seperate</li>
+							</ul>
+						</td>
+						<td>
+							<ul>
+								<li>VoiceOver says number of radio buttons, selected/not selected</li>
+								<li>Reads attached text when button is selected</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</section>
+
+			<section id="part3">
+				<h2>Part 3: State Models & Redesign</h2>
+				<p>
+					This section presents the state models of radio buttons for both mouse users and keyboard users, followed by
+					an improved redesign.
+				</p>
+
+				<h3>Original State Models</h3>
+
+				<h4>Mouse Interaction</h4>
+				<figure>
+					<img src="./assets/Radio_Button_Mouse_State.png" alt="Initial mouse user state model" />
+					<figcaption>Initial mouse user state model</figcaption>
+				</figure>
+
+				<h4>Keyboard Interaction</h4>
+				<figure>
+					<img src="./assets/Radio_Button_Keyboard_State.png" alt="Initial keyboard user state model" />
+					<figcaption>Initial keyboard user state model</figcaption>
+				</figure>
+
+				<h3>Redesigned State Models</h3>
+				<p>Based on issues I identified, the redesigned models introduce:</p>
+				<ul>
+					<li>An optional deselection button to allow undoing selection by mouse.</li>
+					<li>A requirement to press Enter to confirm selection via keyboard.</li>
+				</ul>
+
+				<h4>Revised Mouse Interaction</h4>
+				<figure>
+					<img
+						src="./assets/REVISED_Radio_Button Mouse_State.png"
+						alt="Revised mouse user state model with deselect button"
+					/>
+					<figcaption>Revised mouse user state model with deselect button</figcaption>
+				</figure>
+
+				<h4>Revised Keyboard Interaction</h4>
+				<figure>
+					<img
+						src="./assets/REVISED_Radio_Button Keyboard_State.png"
+						alt="Revised keyboard user state model with enter confirmation"
+					/>
+					<figcaption>Revised keyboard user state model with enter confirmation</figcaption>
+				</figure>
+
+				<h3>Redesigned System Preferences</h3>
+				<p>Below is a Figma mockup of System Preferences, followed by a redesign based on my revised state models.</p>
+
+				<h4>Initial System Preferences mockup</h4>
+				<figure>
+					<img src="./assets/sys_pref_radio_initial.png" alt="MacOS System Preferences radio button mockup" />
+					<figcaption>MacOS System Preferences radio button mockup</figcaption>
+				</figure>
+
+				<h4>Redesigned System Preferences mockup</h4>
+				<figure>
+					<img
+						src="./assets/sys_pref_radio_revised.png"
+						alt="Redesigneded MacOS System Preferences radio button mockup"
+					/>
+					<figcaption>Redesigned MacOS System Preferences radio button mockup</figcaption>
+				</figure>
+
+				<p>
+					In my redesign, I noticed that once a radio button is selected, users cannot deselect it. It's fairly common
+					for someone to accidentally select an option and have no way to undo their choice, so I decided to add a small
+					red "x" to the right of the text of the selected radio button. This maintains the efficiency of System
+					Preferences' current design, while improving usability. In terms of learnability, 'x' typically represents
+					cancellation, and the choice to make it red further enforces that fact. Memorability is not necessary in this
+					case, as the x will be present as long as something is selected.
+				</p>
+			</section>
+
+			<section id="part4">
+				<h2>Part 4: Reflections</h2>
+
+				<ul>
+					<li>
+						The radio buttons I observed performed well in usability, but accessibility varied. Google Forms provided
+						strong keyboard navigation where System Preferences lacked it entirely.
+					</li>
+					<li>
+						My design incorporated an undo selection option to let users deselect a radio button, addressing a missing
+						accessibility consideration in real-world applications.
+					</li>
+					<li>
+						Following the social model of disability, my redesign reduces the mismatch between users and the interface
+						by making selection more flexible for all users, including those with motor impairments.
+					</li>
+					<li>
+						For example, System Preferences completely lacks support for keyboard users, meaning those who have poor
+						motor functions and struggle to use a mouse would run into trouble.
+					</li>
+					<li>
+						Similarly, Google Forms’ lack of explicit selection announcements for screen readers makes it harder for
+						visually impaired users to navigate form inputs effectively.
+					</li>
+					<li>
+						Among the different input methods, mouse and touch interactions are commonly prioritized in UI design, which
+						creates barriers for users who rely on assistive technologies.
+					</li>
+				</ul>
+			</section>
+		</main>
+	</body>
 </html>
