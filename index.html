@@ -20,8 +20,24 @@
 			<section id="introduction">
 				<h2>Introduction</h2>
 				<p>
-					This case study explores the accessibility of radio buttons across three different applications: Google Forms,
-					MacOS System Preferences, and Amazon Checkout.
+					Radio buttons are deceptively simple. Ubiquitous in settings menus, surveys, and checkout flows, they often go
+					unnoticed — until they don't work. For users with motor impairments, poor eyesight, or those relying on screen
+					readers, even a basic set of choices can become a barrier.
+				</p>
+				<p>
+					I chose to investigate radio buttons across three familiar platforms: Google Forms, MacOS System Preferences,
+					and Amazon Checkout, to explore how something so common can vary so much in usability and accessibility. These
+					comparisons revealed glaring differences in keyboard support, screen reader output, and visual feedback.
+				</p>
+				<p>
+					While many developers treat radio buttons as an accessibility checkbox, I found that the experience of using
+					them (especially without a mouse) was inconsistent and sometimes broken. This case study aims to surface those
+					gaps, model state transitions for both mouse and keyboard users, and propose a small redesign that
+					meaningfully improves the experience.
+				</p>
+				<p>
+					Designers and developers often assume that basic components “just work.” This case study challenges that
+					assumption by asking a simple but powerful question: <em>what happens when they don't?</em>
 				</p>
 			</section>
 
@@ -290,34 +306,29 @@
 			</section>
 
 			<section id="part4">
-				<h2>Part 4: Reflections</h2>
-
-				<ul>
-					<li>
-						The radio buttons I observed performed well in usability, but accessibility varied. Google Forms provided
-						strong keyboard navigation where System Preferences lacked it entirely.
-					</li>
-					<li>
-						My design incorporated an undo selection option to let users deselect a radio button, addressing a missing
-						accessibility consideration in real-world applications.
-					</li>
-					<li>
-						Following the social model of disability, my redesign reduces the mismatch between users and the interface
-						by making selection more flexible for all users, including those with motor impairments.
-					</li>
-					<li>
-						For example, System Preferences completely lacks support for keyboard users, meaning those who have poor
-						motor functions and struggle to use a mouse would run into trouble.
-					</li>
-					<li>
-						Similarly, Google Forms’ lack of explicit selection announcements for screen readers makes it harder for
-						visually impaired users to navigate form inputs effectively.
-					</li>
-					<li>
-						Among the different input methods, mouse and touch interactions are commonly prioritized in UI design, which
-						creates barriers for users who rely on assistive technologies.
-					</li>
-				</ul>
+				<h2>Reflections</h2>
+				<p>
+					This project reminded me that accessible design is not just about adding labels or supporting keyboard
+					navigation — it's about anticipating friction points for real people. Each interface I tested treated radio
+					buttons as a solved problem, yet none of them fully supported all users. That gap was most obvious in MacOS,
+					where keyboard navigation was absent entirely, and in Google Forms, where screen reader feedback fell short.
+				</p>
+				<p>
+					Proposing a redesign such as adding a deselect button or requiring keyboard confirmation forced me to think
+					beyond what's “standard” and instead ask what's intuitive, recoverable, and equitable. For example, allowing a
+					user to undo a selection with a simple “X” makes the interface more forgiving, especially for people with
+					motor impairments.
+				</p>
+				<p>
+					As designers and developers, we often inherit component libraries or copy familiar UI patterns without
+					questioning their accessibility. But inclusive design means interrogating defaults. It means testing with
+					screen readers, designing with keyboard-only users in mind, and making even simple interactions resilient to
+					error.
+				</p>
+				<p>
+					Small changes in these foundational components can make a meaningful difference. And more importantly, they
+					remind us that accessibility isn't an afterthought. It's where good design begins.
+				</p>
 			</section>
 		</main>
 	</body>

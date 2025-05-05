@@ -1,36 +1,35 @@
 :root {
-	--green: #7a918d;
-	--brown: #484041;
-	--background: #fdfdfb;
-	--text-dark: #2c2c2c;
-	--text-light: #aac0aa;
 	--font-primary: "Rubik", sans-serif;
+	--background-color: #fdfdfb;
+	--text-color: #2c2c2c;
+	--accent-color: #7a918d;
+	--subtle-gray: #eaeaea;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	font-family: var(--font-primary);
-	background-color: var(--background);
-	color: var(--text-dark);
+	background-color: var(--background-color);
+	color: var(--text-color);
 	line-height: 1.6;
 }
 
 header {
-	background: var(--green);
+	background: var(--accent-color);
 	color: white;
 	padding: 2rem 1rem;
 	text-align: center;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
+h1 {
 	margin: 0;
 	font-size: 2rem;
 }
 
 main {
-	max-width: 1400px;
+	max-width: 900px;
 	margin: 2rem auto;
 	padding: 2rem;
 	background: white;
@@ -38,20 +37,16 @@ main {
 	border-radius: 12px;
 }
 
-section {
-	margin-bottom: 3rem;
-}
-
 h2 {
-	font-size: 1.75rem;
-	margin-bottom: 1rem;
-	color: var(--brown);
+	font-size: 1.5rem;
+	margin-top: 0rem;
+	border-bottom: 2px solid var(--subtle-gray);
+	padding-bottom: 0.3rem;
 }
 
 h3 {
-	font-size: 1.3rem;
-	margin-top: 2rem;
-	color: var(--brown);
+	font-size: 1.25rem;
+	margin-top: 1.5rem;
 }
 
 h4 {
@@ -97,7 +92,7 @@ th {
 
 img {
 	display: block;
-	max-width: 100%;
+	max-width: 70%;
 	height: auto;
 	margin: 1rem auto;
 	border-radius: 6px;
